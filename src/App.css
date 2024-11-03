@@ -1,0 +1,58 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 40px); /* Adjust based on your cell size */
+    gap: 2px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
+
+.cell.revealed {
+    background-color: #d0d0d0;
+}
+
+.cell.hidden {
+    background-color: #a0a0a0;
+}
+
+.cellStyle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+#gameOverImage {
+    opacity: 100;
+    z-index: 4;
+    height: 70%;
+    max-width: 100%;
+    margin: 0 50px;
+    background: url("https://www.google.com/logos/fnbx/minesweeper/lose_screen.png")
+        0px 80px no-repeat;
+    background-repeat: repeat-x;
+    position: relative;
+    padding-top: 20px;
+}
+
+.tryAgain {
+    cursor: pointer;
+    margin: 0 50px;
+    border-radius: 7px;
+    background: darkgreen;
+    color: rgb(158, 255, 158);
+    padding: 10px;
+    font-weight: 700;
+}
